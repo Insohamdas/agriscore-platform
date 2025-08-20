@@ -2,7 +2,6 @@
 
 // Disable static prerendering for this page to avoid build-time handler serialization issues
 export const dynamic = "force-dynamic"
-export const revalidate = 0
 
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"

@@ -1,7 +1,7 @@
 import type React from "react"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { Metadata } from "next"
+import { Metadata, Viewport } from "next"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,7 +20,10 @@ export const metadata: Metadata = {
     shortcut: '/favicon.png',
     apple: '/favicon.png',
   },
-  manifest: '/manifest.json',
+  manifest: '/manifest.json'
+}
+
+export const viewport: Viewport = {
   themeColor: '#4ade80'
 }
 
