@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <rect width="160" height="160" rx="20" fill="#0ea5e9"/>
+  <circle cx="80" cy="60" r="28" fill="#e0f2fe"/>
+  <rect x="40" y="92" width="80" height="40" rx="20" fill="#0369a1"/>
+  <text x="80" y="152" font-size="28" text-anchor="middle" fill="#f0f9ff" font-family="Arial" font-weight="700">AK</text>
+</svg>
