@@ -25,7 +25,7 @@ export default function CaseStudiesPage() {
         { metric: "Cost Reduction", value: "₹45,000", icon: TrendingUp, color: "text-orange-500" },
       ],
       quote: "AgriScore has completely transformed my farming. Now I make data-driven decisions, not guesswork.",
-  image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=1200&auto=format&fit=crop",
+  image: "https://st5.depositphotos.com/81161912/66752/i/450/depositphotos_667522276-stock-photo-maharashtra-look-farmer-happy-farmer.jpg",
     },
     {
       title: "Sunita Devi's Organic Farming",
@@ -41,7 +41,7 @@ export default function CaseStudiesPage() {
         { metric: "Soil Health", value: "85%", icon: TrendingUp, color: "text-brown-500" },
       ],
       quote: "With AgriScore's help, I adopted completely organic farming and now get better prices.",
-  image: "https://images.unsplash.com/photo-1500634245200-e5245c40cc12?q=80&w=1200&auto=format&fit=crop",
+  image: "https://www.pabra-africa.org/wp-content/uploads/2018/01/b1b826f6-9717-11e6-afe3-aa7519fc8cd3-780x529.jpg",
     },
     {
       title: "Krishna FPO's Collective Success",
@@ -57,7 +57,7 @@ export default function CaseStudiesPage() {
         { metric: "Total Savings", value: "₹25 Lakh", icon: TrendingUp, color: "text-orange-500" },
       ],
       quote: "All farmers in our FPO are now doing smart farming together. This is our biggest success.",
-  image: "https://images.unsplash.com/photo-1562259949-e8e7689d7824?q=80&w=1200&auto=format&fit=crop",
+  image: "https://www.abhivyaktifoundation.in/wp-content/uploads/sites/2/2016/06/fpo.jpg",
     },
   ]
 
@@ -144,11 +144,11 @@ export default function CaseStudiesPage() {
                     {study.results.map((result, resultIndex) => {
                       const IconComponent = result.icon
                       return (
-                        <Card key={resultIndex} className="p-4 text-center">
+                        <div key={resultIndex} className="p-4 text-center bg-card text-card-foreground rounded-xl border shadow-sm">
                           <IconComponent className={`h-6 w-6 mx-auto mb-2 ${result.color}`} />
                           <div className="text-2xl font-bold text-foreground">{result.value}</div>
                           <div className="text-xs text-muted-foreground">{result.metric}</div>
-                        </Card>
+                        </div>
                       )
                     })}
                   </div>

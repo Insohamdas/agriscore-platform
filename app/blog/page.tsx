@@ -139,7 +139,7 @@ export default function BlogPage() {
         return (
           <section className="py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <Card className="relative overflow-hidden rounded-2xl border-0 shadow-2xl animate-slide-in-up">
+              <div className="relative overflow-hidden rounded-2xl border-0 shadow-2xl animate-slide-in-up">
                 <img
                   src={post.image}
                   alt={post.title}
@@ -187,7 +187,7 @@ export default function BlogPage() {
                     </Button>
                   </div>
                 </div>
-              </Card>
+              </div>
             </div>
           </section>
         )
@@ -200,10 +200,9 @@ export default function BlogPage() {
             {filteredPosts
               .filter((post) => !post.featured)
               .map((post, index) => (
-                <Card
+                <div
                   key={index}
                   className={`group overflow-hidden rounded-2xl ring-1 ring-border hover:shadow-lg transition-all duration-300 animate-slide-in-up animate-delay-${(index + 1) * 100} cursor-pointer`}
-                  asChild
                 >
                   <a href="#" aria-label={`Open post: ${post.title}`}>
                   <div className="relative">
@@ -226,7 +225,7 @@ export default function BlogPage() {
                     </div>
                   </div>
 
-                  <CardContent className="p-6">
+                  <div className="p-6 flex flex-col gap-6">
                     <div className="space-y-3">
                       <h3 className="text-lg font-semibold text-foreground line-clamp-2 group-hover:text-primary transition-colors">{post.title}</h3>
                       <p className="text-sm text-muted-foreground line-clamp-3">{post.excerpt}</p>
@@ -248,9 +247,9 @@ export default function BlogPage() {
                         Read More
                       </Button>
                     </div>
-                  </CardContent>
+                  </div>
                   </a>
-                </Card>
+                </div>
               ))}
           </div>
         </div>
@@ -259,7 +258,7 @@ export default function BlogPage() {
       {/* Newsletter - enhanced UI */}
       <section className="py-20 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="p-8 bg-white/95 backdrop-blur border-white/40 shadow-2xl">
+          <div className="p-8 bg-white/95 backdrop-blur border-white/40 shadow-2xl rounded-xl">
             <div className="text-center mb-6">
               <h2 className="text-3xl font-bold text-foreground mb-2">Subscribe to our newsletter</h2>
               <p className="text-muted-foreground">Get the latest farming tips and agri-tech insights every week.</p>
@@ -277,7 +276,7 @@ export default function BlogPage() {
               </Button>
             </form>
             <p className="text-xs text-muted-foreground mt-3 text-center">No spam. Unsubscribe anytime.</p>
-          </Card>
+          </div>
         </div>
       </section>
 

@@ -14,13 +14,7 @@ export const metadata: Metadata = {
   description:
     "Soil, weather, and crop intelligence in one place. Save water, reduce inputs, and grow profits with AgriScore.",
   keywords: ["smart farming", "precision agriculture", "soil sensors", "NDVI", "irrigation scheduling", "India"],
-  generator: 'v0.app',
-  icons: {
-    icon: '/favicon.png',
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
-  },
-  manifest: '/manifest.json'
+  generator: 'v0.app'
 }
 
 export const viewport: Viewport = {
@@ -34,11 +28,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} antialiased`}>
-      <head>
-        <link rel="icon" href="/favicon.png" />
-        <link rel="apple-touch-icon" href="/favicon.png" />
-      </head>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        {children}
+      </body>
     </html>
   )
 }
