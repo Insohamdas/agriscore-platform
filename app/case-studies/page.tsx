@@ -96,12 +96,6 @@ export default function CaseStudiesPage() {
                       src={study.image || "/placeholder.svg"}
                       alt={study.title}
                       className="w-full h-80 object-cover"
-                      onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement
-                        if (target.src !== window.location.origin + "/placeholder.jpg") {
-                          target.src = "/placeholder.jpg"
-                        }
-                      }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   </div>
