@@ -24,7 +24,7 @@ export function CTASection() {
 
   return (
     <section className="py-20 bg-gradient-to-r from-primary via-secondary to-accent relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/indian-agricultural-pattern.png')] opacity-10"></div>
+      <div className="absolute inset-0 bg-[url('/indian-pattern.png')] opacity-10"></div>
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black/20 to-transparent"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">

@@ -3,6 +3,22 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(45deg); }
+  50% { transform: translateY(-10px) rotate(45deg); }
+}
+
+@keyframes shine-radial {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
 :root {
   --background: oklch(0.99 0.01 120);
   --foreground: oklch(0.15 0.02 140);
@@ -11,12 +27,12 @@
   --popover: oklch(0.98 0.01 120);
   --popover-foreground: oklch(0.15 0.02 140);
 
-  /* Updated to vibrant Indian-inspired colors */
-  --primary: oklch(0.45 0.18 140); /* Rich green for agriculture */
+  /* Authentic Indian color palette */
+  --primary: oklch(0.48 0.22 142); /* Indian Flag Green */
   --primary-foreground: oklch(0.98 0.01 120);
-  --secondary: oklch(0.65 0.22 45); /* Warm saffron orange */
+  --secondary: oklch(0.7 0.25 50); /* Saffron Orange */
   --secondary-foreground: oklch(0.98 0.01 120);
-  --accent: oklch(0.55 0.15 200); /* Monsoon blue */
+  --accent: oklch(0.45 0.2 280); /* Royal Indian Purple */
   --accent-foreground: oklch(0.98 0.01 120);
 
   --muted: oklch(0.95 0.02 120);
@@ -285,6 +301,52 @@
   100% {
     transform: rotateZ(0);
   }
+}
+
+/* 3D transform utilities for field visualization */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-y-3 {
+  transform: rotateY(3deg);
+}
+
+.transform-gpu {
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+@keyframes ken-burns {
+  0% {
+    transform: scale(1) translate(0);
+  }
+  50% {
+    transform: scale(1.05) translate(-1%, -1%);
+  }
+  100% {
+    transform: scale(1) translate(0);
+  }
+}
+
+.animate-ken-burns {
+  animation: ken-burns 20s ease-in-out infinite alternate;
 }
 
 /* Enhanced animation classes */
